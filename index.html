@@ -995,7 +995,7 @@
                 role="tab"
                 aria-controls="test"
                 aria-selected="false"
-                onclick="document.getElementById('downloadLink').click();"
+                onclick="openPDF()"
               >PDF</a>
             </li>
           </ul>
@@ -1007,13 +1007,23 @@
         </div>
         <!-- End -->
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Hidden Download Link -->
-<a id="downloadLink" href="./assets/MayankKumar-FullStackWebDeveloper-ErzZ.pdf" download="Mayank Kumar.pdf" style="display: none;">Download</a>
-
+      
+      <!-- Hidden Download Link -->
+      <a id="downloadLink" href="./assets/MayankKumar-FullStackWebDeveloper-ErzZ.pdf" download="Mayank Kumar.pdf" style="display: none;">Download</a>
+      
+      <!-- JavaScript Function -->
+      <script>
+        function openPDF() {
+          // Open the Google Drive link in a new tab
+          window.open('https://drive.google.com/file/d/1BXCa8JgFDHc26kJ3DCGOVEr1srriiKIJ/view?usp=drive_link', '_blank');
+          
+          // Trigger the download
+          document.getElementById('downloadLink').click();
+        }
+      </script>
+      
+      
+      
       <!-- pricing area -->
 
       <!-- Start Contact Area -->
